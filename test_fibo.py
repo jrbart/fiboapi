@@ -1,5 +1,5 @@
 import unittest
-from mymath.fibo import fibo
+from mymath.fibo import fibo, RangeError
 
 class TestFibo(unittest.TestCase):
 
@@ -11,6 +11,14 @@ class TestFibo(unittest.TestCase):
 
     def test_fib3(self):
         self.assertEqual(fibo(3),[0, 1, 1])
+
+    def test_neg_input(self):
+        try:
+            fibo(-1)
+        except RangeError:
+            pass
+        else:
+            self.fail("Expected Exception not thrown")
 
 if __name__ == "__main__":
     unittest.main()
