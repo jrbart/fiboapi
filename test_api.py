@@ -38,6 +38,11 @@ class TestImport(unittest.TestCase):
         self.assertEqual(req.status,"404 Not Found")
         self.assertEqual(req.data,"Exception: ValueError")
 
+    def test_fibo_weird_path(self):
+        req = self.app.request("/fibo/1/2/3",method="GET")
+        self.assertEqual(req.status,"404 Not Found")
+        self.assertEqual(req.data,"Exception: ValueError")
+
 if __name__ == "__main__":
     unittest.main()
 
