@@ -1,4 +1,5 @@
 import unittest
+import json
 from fiboapi import *
 
 class TestImport(unittest.TestCase):
@@ -12,7 +13,8 @@ class TestImport(unittest.TestCase):
     def test_fibo_1(self):
         req = self.app.request("/fibo/1",method="GET")
         self.assertEqual(req.status,"200 OK")
-        self.assertEqual(req.data,"0")
+        self.assertEqual(req.headers,{"Content-Type":"application/json"})
+        self.assertEqual(json.loads(req.data),[0])
 
 if __name__ == "__main__":
     unittest.main()

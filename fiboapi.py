@@ -1,4 +1,5 @@
 import web
+import json
 
 urls = ( "/",          "index", 
          "/fibo/(.*)", "fibo",  )
@@ -9,7 +10,8 @@ class index:
 
 class fibo:
     def GET(self,val):
-        return 0
+        web.header('Content-Type', 'application/json')
+        return json.dumps([0])
 
 if __name__ == "__main__":
     app = web.application(urls,globals())
