@@ -9,6 +9,9 @@ class TestImport(unittest.TestCase):
         req = self.app.request("/",method="GET")
         self.assertEqual(req.status,"200 OK")
 
+    def test_fibo_1(self):
+        req = self.app.request("/fibo/1",method="GET")
+        self.assertEqual(req.status,"200 OK")
 
 if __name__ == "__main__":
     unittest.main()

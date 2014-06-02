@@ -1,9 +1,14 @@
 import web
 
-urls = ( "/", "index", )
+urls = ( "/",          "index", 
+         "/fibo/(.*)", "fibo",  )
 
 class index:
     def GET(self):
+        return 1
+
+class fibo:
+    def GET(self,val):
         return 1
 
 if __name__ == "__main__":
