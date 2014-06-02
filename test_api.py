@@ -28,6 +28,11 @@ class TestImport(unittest.TestCase):
         self.assertEqual(req.headers,{"Content-Type":"application/json"})
         self.assertEqual(json.loads(req.data),[0, 1, 1, 2, 3, 5, 8, 13])
 
+    def test_fibo_RangeError(self):
+        req = self.app.request("/fibo/-1",method="GET")
+        self.assertEqual(req.status,"404 Not Found")
+        self.assertEqual(req.data,"Exception: RangeError")
+
 if __name__ == "__main__":
     unittest.main()
 
