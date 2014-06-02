@@ -16,6 +16,8 @@ class myfibo:
             res = fibo(int(val))
         except RangeError:
             raise web.notfound("Exception: RangeError")
+        except ValueError:
+            raise web.notfound("Exception: ValueError")
         return json.dumps(res)
 
 if __name__ == "__main__":
