@@ -18,7 +18,15 @@ class TestFibo(unittest.TestCase):
         except RangeError:
             pass
         else:
-            self.fail("Expected Exception not thrown")
+            self.fail("Expected Exception RandgeError not thrown")
+
+    def test_bad_input(self):
+        try:
+            fibo("The rain in Spain")
+        except TypeError:
+            pass
+        else:
+            self.fail("Expected Exception TypeError not thrown")
 
 if __name__ == "__main__":
     unittest.main()

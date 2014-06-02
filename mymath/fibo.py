@@ -3,6 +3,9 @@
 class RangeError(Exception):
     pass
 
+class InputError(Exception):
+    pass
+
 def fibo(n):
     if n < 0:
         raise RangeError
