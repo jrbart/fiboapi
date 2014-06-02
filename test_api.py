@@ -16,6 +16,12 @@ class TestImport(unittest.TestCase):
         self.assertEqual(req.headers,{"Content-Type":"application/json"})
         self.assertEqual(json.loads(req.data),[0])
 
+    def test_fibo_2(self):
+        req = self.app.request("/fibo/2",method="GET")
+        self.assertEqual(req.status,"200 OK")
+        self.assertEqual(req.headers,{"Content-Type":"application/json"})
+        self.assertEqual(json.loads(req.data),[0, 1])
+
 if __name__ == "__main__":
     unittest.main()
 
