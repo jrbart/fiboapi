@@ -13,6 +13,8 @@ destination directory and running:
 
     python fiboapi.py 2>&1 >/dev/null
 
-Service is WSCGI and may be installed under a HTTP
+Service is WSGI and may be installed under a HTTP
 server such as nginx or Apache, or may be run as
 standalone as above.
+
+Depends on Python web and json modules.
