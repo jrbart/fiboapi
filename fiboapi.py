@@ -1,6 +1,6 @@
 import web
 import json
-from mymath.fibo import *
+from mymath import fibo, RangeError
 
 urls = ( "/",          "index", 
          "/fibo/(.*)", "myfibo",  )

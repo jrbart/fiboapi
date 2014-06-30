@@ -1,6 +1,6 @@
 import unittest
 
-from mymath.fibo import fibo
+from mymath import fibo
 
 def noop():
     pass

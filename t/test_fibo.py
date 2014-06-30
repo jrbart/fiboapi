@@ -1,5 +1,5 @@
 import unittest
-from mymath.fibo import fibo, RangeError
+from mymath import fibo, RangeError
 
 class TestFibo(unittest.TestCase):
 
