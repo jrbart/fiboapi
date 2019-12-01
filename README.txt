@@ -1,3 +1,21 @@
+This was a coding test given to me pre-interview.
+
+I was supposed to ask if I had any questions, but
+the definition of the task was clear enough.  However
+I was marked down because I did not ask how I was
+supposed to deploy this code into a production
+environment and my directions to pull it from git
+and start it were not sufficient.
+
+I don't think it would have been avery good fit anyways
+since they were very suprised at how many tests I 
+had written, even though I plainly list on my resume
+that I wouls prefer working in an environment open
+to TDD.  It also would explain why their production
+code seemed to have an unusual number of problems
+everytime they launched a new feature.
+
+
 Fibonacci API
 
 Service runs on port 8080
