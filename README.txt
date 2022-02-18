@@ -7,14 +7,10 @@ supposed to deploy this code into a production
 environment and my directions to pull it from git
 and start it were not sufficient.
 
-I don't think it would have been avery good fit anyways
-since they were very suprised at how many tests I 
-had written, even though I plainly list on my resume
-that I wouls prefer working in an environment open
-to TDD.  It also would explain why their production
-code seemed to have an unusual number of problems
-everytime they launched a new feature.
-
+They were very suprised at how many tests I had
+written, even though I plainly list on my resume
+that I would prefer working in an environment open
+to TDD.
 
 Fibonacci API
 
